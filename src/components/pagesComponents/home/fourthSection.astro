@@ -1,0 +1,59 @@
+---
+import Swipper from "../../customs/swipper.jsx"
+var array = [
+  {
+    name: "Netflix",
+    img: "https://api.iconify.design/logos:netflix.svg",
+    link: "https://www.netflix.com"
+  },
+  {
+    name: "Amazon",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    link: "https://www.amazon.com"
+  },
+  {
+    name: "Apple",
+    img: "https://api.iconify.design/ic:round-apple.svg",
+    link: "https://www.apple.com"
+  },
+  {
+    name: "Google",
+    img: "https://calldynamics.com.au/wp-content/uploads/2016/06/new-google-logo-png.png",
+    link: "https://www.google.com"
+  },
+  {
+    name: "Facebook",
+    img: "https://logos-world.net/wp-content/uploads/2020/05/Facebook-Logo.png",
+    link: "https://www.facebook.com"
+  },
+  {
+    name: "Twitter",
+    img: "https://images.freeimages.com/image/large-previews/b2e/x-twitter-black-isolated-logo-5694253.png?fmt=webp&w=500",
+    link: "https://www.twitter.com"
+  },
+  {
+    name: "HBO",
+    img: "https://1000marcas.net/wp-content/uploads/2020/01/logo-HBO.png",
+    link: "https://www.hbo.com"
+  },
+  {
+    name: "Youtube",
+    img: "https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png",
+    link: "https://www.youtube.com"
+  },
+  {
+    name: "Disney",
+    img: "https://1000marcas.net/wp-content/uploads/2021/04/Disney-Plus-Logo-2019-2024.png",
+    link: "https://www.disney.com"
+  },
+  {
+    name: "Spotify",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8uU7k5jsTvGoHVHyuWfXlRVs9agVeIN2CSQ&s",
+    link: "https://www.spotify.com"
+  }
+]
+---
+<h2 class="text-4xl font-bold text-center mt-28 mb-14">Algunos casos de éxito</h2>
+<section class="mb-24">
+  <Swipper client:load slideArray={array.map((item) => item)} />
+</section>

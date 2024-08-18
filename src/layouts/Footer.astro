@@ -1,0 +1,23 @@
+---
+import Instagram from "../assets/icons/Instagram.astro";
+import Twitter from "../assets/icons/Twitter.astro";
+import IconLogo from "../../public/favicon.svg"
+---
+
+<footer class="bg-white pt-8 pb-4 px-4 lg:px-8 flex flex-col items-center justify-center gap-7" style="box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);">
+  <div class="flex justify-between w-full items-center">
+    <div class="flex gap-5">
+      <a href="#" aria-label="Instagram de Odon"><Instagram class="w-7 h-7 hover:opacity-50"/></a>
+      <a href="#" aria-label="Twitter de Odon"><Twitter class="w-7 h-7 hover:opacity-50"/></a>
+    </div>
+    <!-- <div class="flex gap-5">
+      <a class="hover:text-orange-500" href="/">Inicio</a>
+      <a class="hover:text-orange-500" href="/alineadores">Alineadores</a>
+      <a class="hover:text-orange-500" href="/personas">Personas</a>
+      <a class="hover:text-orange-500" href="/contacto">Contacto</a>
+    </div> -->
+    <img src={IconLogo.src} class="h-32 w-32" alt="logo" loading="lazy"/>
+
+  </div>
+  <p class="text-center">© {new Date().getFullYear()} Landing Page Team, todos los derechos reservados.</p>
+</footer>

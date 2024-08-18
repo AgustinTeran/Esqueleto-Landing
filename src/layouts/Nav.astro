@@ -1,0 +1,23 @@
+---
+import Hamburguer from "../assets/icons/Hamburguer.jsx";
+import IconLogo from "../../public/favicon.svg"
+---
+
+<nav class="flex items-center justify-between py-2 px-4 bg-white shadow-md sticky top-0 right-0 z-50">
+  <a href="/">
+    <img src={IconLogo.src} class="h-16 w-16 hover:opacity-50" alt="logo" />
+  </a>
+  <div class="gap-5 hidden lg:flex">
+    <a class="hover:opacity-50 py-2 px-5 min-w-28 font-semibold text-center bg-primary text-pirmary-contrast rounded-full" href="/">Inicio</a>
+    <a class="hover:opacity-50 py-2 px-5 min-w-28 font-semibold text-center bg-primary text-pirmary-contrast rounded-full" href="/nosotros">Nosotros</a>
+    <a class="hover:opacity-50 py-2 px-5 min-w-28 font-semibold text-center bg-primary text-pirmary-contrast rounded-full" href="/contacto">Contacto</a>
+  </div>
+  <div class="lg:hidden">
+    <Hamburguer client:load>
+      <a class="hover:opacity-50 py-2 px-5 min-w-32 font-semibold text-center bg-primary text-pirmary-contrast rounded-full" href="/">Inicio</a>
+      <a class="hover:opacity-50 py-2 px-5 min-w-32 font-semibold text-center bg-primary text-pirmary-contrast rounded-full" href="/nosotros">Nosotros</a>
+      <a class="hover:opacity-50 py-2 px-5 min-w-32 font-semibold text-center bg-primary text-pirmary-contrast rounded-full" href="/contacto">Contacto</a>
+    </Hamburguer>
+  </div>
+  
+</nav>

@@ -1,0 +1,23 @@
+---
+var array = [
+  {title: "Sitios estaticos", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque."},
+  {title: "Facil de implementar", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque."},
+  {title: "Renderizado en islas", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque."},
+  {title: "SSR compatible", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque."},
+  {title: "Integracion con React, Vue, Svelte", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque."},
+  {title: "Performance y SEO", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque."},
+]
+---
+
+<h2 class="text-4xl font-bold text-center mb-16 mt-10">¿Por qué Astro para landing pages?</h2>
+<section class="flex gap-12 items-center justify-center flex-wrap">
+  {
+    array.map((item) => (
+      <div data-aos="zoom-in" class="flex flex-col gap-4 rounded-lg bg-white p-6 shadow-md w-72 h-52">
+        <h2 class="text-2xl font-bold text-center">{item.title}</h2>
+        <p class="text-lg">{item.description}</p>
+      </div>
+    ))
+  }
+</section>
+<script src="../../../config/js/aos.js"></script>
