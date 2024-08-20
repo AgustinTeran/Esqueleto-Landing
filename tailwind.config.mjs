@@ -10,6 +10,9 @@ export default {
 				primary: "rgb(1, 131, 145)",
 				"pirmary-contrast": "#fff",
 				secondary: "#1111f3",
+			},
+			screens: {
+				'xs': '580px',
 			}
 		},
 		

@@ -46,7 +46,7 @@ export default function Counter() {
   }, []);
 
   return (
-    <div className='flex gap-10 items-center justify-center flex-wrap'>
+    <div className='flex gap-10 items-center justify-center flex-wrap flex-col xs:flex-row'>
       <span ref={counterRef1} className='text-3xl text-primary font-semibold'>
         +{startCount1 && <CountUp start={0} end={100} duration={2.5} />} Proyectos
       </span>
