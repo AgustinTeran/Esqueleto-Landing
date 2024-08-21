@@ -1,7 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ContactSection from '../components/pagesComponents/contacto/contactSection.astro';
 ---
 
 <Layout title="Contacto">
-  <h1 class="text-center text-3xl">En desarrollo...</h1>
+  <div class="flex-col flex flex-wrap gap-16  justify-center my-10 items-center lg:flex-row">
+    <h1 class="text-4xl font-bold text-center lg:text-start">Estamos acá para <br> <span class="text-primary">ayudarte a mejorar <br> tu negocio.</span></h1>
+    <ContactSection/>
+  </div>
+  
 </Layout>
