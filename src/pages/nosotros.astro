@@ -1,7 +1,101 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Rocket from "../assets/icons/FxemojiRocket.astro";
+import Simple from "../assets/icons/TwemojiAstronaut.astro"
+import World from "../assets/icons/World.astro"
+
+
+const team = [
+  { name: "Agustín Intern", role: "Frontend Dev", seed: "agstinnnn" },
+  { name: "Ines UX", role: "Diseñadora UI/UX", seed: "ines" },
+  { name: "Carlos Backend", role: "Backend Architect", seed: "carl" }
+];
 ---
 
-<Layout title="Nosotros">
-  <h1 class="text-center text-3xl">En desarrollo...</h1>
+<Layout title="Sobre Nosotros">
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <h1 class="text-5xl font-bold text-gray-900 dark:text-white mb-6">Conoce nuestro <span class="text-primary">equipo</span></h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        Somos apasionados por crear experiencias digitales memorables con tecnología de vanguardia.
+      </p>
+    </section>
+
+    <!-- Historia -->
+    <section class="mb-20 grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Nuestra <span class="text-primary">historia</span></h2>
+        <div class="space-y-4 text-gray-600 dark:text-gray-300">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sunt culpa odio enim mollitia deleniti modi? Illum vero sunt voluptatum mollitia </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minus aliquid neque ut dignissimos velit, laudantium quia porro nihil rerum quo officiis aliquam quos eligendi voluptates ex modi? At, aperiam!</p>
+        </div>
+      </div>
+      <div class="order-1 md:order-2">
+        <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-1">
+          <img 
+            src="https://www.eude.es/wp-content/uploads/2018/05/Dise%C3%B1o-sin-t%C3%ADtulo-2021-05-11T165120.480.png" 
+            alt="Equipo trabajando" 
+            class="w-full h-auto rounded-2xl border-4 border-white dark:border-gray-800"
+            width="600"
+            height="400"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="mb-20">
+      <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Nuestros <span class="text-primary">valores</span></h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <div class="flex gap-3">
+            <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4 w-fit"><Rocket/></div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white w-fit">Innovación</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">Buscamos siempre las soluciones más creativas y eficientes.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <div class="flex gap-3">
+            <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4"><Simple/></div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Simplicidad</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">Creemos en interfaces limpias y experiencias intuitivas.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <div class="flex gap-3">
+            <div class="text-blue-600 dark:text-blue-400 text-4xl mb-4"><World/></div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Accesibilidad</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">Diseñamos para todos los usuarios, sin excepción.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section>
+      <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Conoce al <span class="text-primary">equipo</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {team.map(member => (
+          <div class="text-center">
+          <div class="relative w-48 h-48 mx-auto mb-6">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-md opacity-30"></div>
+            <img 
+              src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member.seed}&backgroundColor=b6e3f4,c0aede,d1d4f9`}
+              alt={member.name} 
+              class="relative w-full h-full rounded-full object-cover border-4 border-white dark:border-gray-800"
+              width="192"
+              height="192"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">{member.name}</h3>
+          <p class="text-blue-600 dark:text-blue-400 mb-2">{member.role}</p>
+          <p class="text-gray-600 dark:text-gray-300 max-w-xs mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima.</p>
+        </div>
+        ))}
+      </div>
+    </section>
+  </main>
 </Layout>
